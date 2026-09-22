@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Glowly — Варианты работы для мастеров ногтевого сервиса</title>
+    <style>
+      @page {
+        margin: 0;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        background-color: #ffffff;
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          background-color: #1f1f1f;
+        }
+      }
+      body {
+        padding: 24px 0;
+        margin: 0 auto;
+        max-width: 900px !important;
+        border: none !important;
+        background: transparent !important;
+        font-family:
+          "Segoe UI",
+          -apple-system,
+          BlinkMacSystemFont,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        color: #1e293b;
+        line-height: 1.45;
+      }
+      .page {
+        height: 297mm;
+        margin: 0 auto 12px auto;
+        padding: 16mm 18mm 12mm 18mm;
+        background-color: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+      }
+      @media screen and (max-width: 600px) {
+        body {
+          padding: 16px 0;
+        }
+        .page {
+          margin: 0 auto 8px auto;
+          border: none;
+          padding: 12px 16px;
+          height: auto;
+          min-height: 297mm;
+        }
+      }
+      .page-content {
+        flex: 1 1 0;
+        min-height: 0;
+        overflow: hidden;
+      }
+      .page-footer {
+        flex-shrink: 0;
+        margin-top: auto;
+        padding-top: 3mm;
+        border-top: 1px solid #e2e8f0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 8.5pt;
+        color: #64748b;
+      }
+
+      /* Header Masthead */
+      .header-masthead {
+        background: #49345e;
+        color: #ffffff;
+        padding: 18px 22px;
+        border-radius: 6px;
+        margin-bottom: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .masthead-title h1 {
+        font-size: 17pt;
+        font-weight: 700;
+        margin: 0 0 4px 0;
+        letter-spacing: 0.3px;
+        color: #ffffff;
+      }
+      .masthead-title p {
+        font-size: 9.5pt;
+        margin: 0;
+        color: #e2e8f0;
+        font-weight: 300;
+      }
+      .brand-badge {
+        background: #ff7e30;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 9pt;
+        padding: 6px 14px;
+        border-radius: 4px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .intro-text {
+        font-size: 9.5pt;
+        color: #475569;
+        margin-bottom: 14px;
+        line-height: 1.4;
+        background: #f8fafc;
+        padding: 10px 14px;
+        border-left: 3px solid #ff7e30;
+        border-radius: 0 4px 4px 0;
+      }
+
+      .section-title {
+        font-size: 11pt;
+        font-weight: 700;
+        color: #1e293b;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin: 0 0 10px 0;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #cbd5e1;
+      }
+
+      /* Comparison Table */
+      .comp-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 8.5pt;
+        margin-bottom: 16px;
+      }
+      .comp-table th {
+        background-color: #d3c8ff;
+        color: #000000;
+        padding: 8px 10px;
+        text-align: left;
+        font-weight: 600;
+        border: 1px solid #2a1b28;
+      }
+      .comp-table th:first-child {
+        width: 22%;
+      }
+      .comp-table th:nth-child(2) {
+        width: 26%;
+      }
+      .comp-table th:nth-child(3) {
+        width: 26%;
+      }
+      .comp-table th:nth-child(4) {
+        width: 26%;
+      }
+      .comp-table td {
+        padding: 7px 10px;
+        border: 1px solid #cbd5e1;
+        vertical-align: top;
+        color: #334155;
+        line-height: 1.35;
+      }
+      .comp-table tr:nth-child(even) td {
+        background-color: #f8fafc;
+      }
+      .tag-w2 {
+        display: inline-block;
+        background: #e0f2fe;
+        color: #0369a1;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 7.5pt;
+        margin-bottom: 2px;
+      }
+      .tag-ind {
+        display: inline-block;
+        background: #fef3c7;
+        color: #b45309;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 7.5pt;
+        margin-bottom: 2px;
+      }
+      .tag-biz {
+        display: inline-block;
+        background: #f3e8ff;
+        color: #6b21a8;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 7.5pt;
+        margin-bottom: 2px;
+      }
+
+      /* Option Detail Cards Grid */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .option-card {
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        padding: 12px;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+      }
+      .card-w2 {
+        border-top: 4px solid #0284c7;
+      }
+      .card-ind {
+        border-top: 4px solid #ff7e30;
+      }
+      .card-biz {
+        border-top: 4px solid #bd7cff;
+      }
+
+      .card-header {
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      .card-header h3 {
+        font-size: 10.5pt;
+        margin: 0 0 2px 0;
+        color: #0f172a;
+      }
+      .card-subtitle {
+        font-size: 8pt;
+        color: #64748b;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .card-body p {
+        font-size: 8.5pt;
+        color: #475569;
+        margin: 0 0 8px 0;
+        line-height: 1.35;
+      }
+
+      .feature-list {
+        margin: 0;
+        padding-left: 14px;
+        font-size: 8pt;
+        color: #334155;
+      }
+      .feature-list li {
+        margin-bottom: 6px;
+        line-height: 1.3;
+      }
+      .feature-list li strong {
+        color: #0f172a;
+      }
+
+      /* Summary Box */
+      .summary-box {
+        background-color: #f8fafc;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        padding: 12px 16px;
+        margin-top: 10px;
+      }
+      .summary-box h4 {
+        margin: 0 0 6px 0;
+        font-size: 9.5pt;
+        color: #1e293b;
+      }
+      .summary-box p {
+        margin: 0;
+        font-size: 8.5pt;
+        color: #475569;
+        line-height: 1.4;
+      }
+
+      @media print {
+        @page {
+          size: letter;
+          margin: 0;
+        }
+        *,
+        *::before,
+        *::after {
+          box-shadow: none !important;
+          text-shadow: none !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        body {
+          padding: 0;
+          background: none;
+        }
+        .page {
+          margin: 0;
+          border: none;
+          height: 279.4mm;
+          padding: 14mm 18mm 8mm 18mm;
+          break-after: page;
+          page-break-after: always;
+        }
+        .header-masthead {
+          margin-bottom: 10px;
+        }
+        .intro-text {
+          margin-bottom: 10px;
+        }
+        .section-title {
+          margin-bottom: 8px;
+        }
+        .comp-table {
+          margin-bottom: 12px;
+        }
+        .page-footer {
+          padding-top: 2mm;
+          font-size: 8pt;
+        }
+        .page:last-child {
+          break-after: auto;
+          page-break-after: auto;
+        }
+      }
+      [contenteditable]:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div contenteditable="true">
+      <!-- PAGE 1 -->
+      <section class="page">
+        <div class="page-content">
+          <header class="header-masthead">
+            <div class="masthead-title">
+              <h1>GLOWLY</h1>
+              <p>Руководство по вариантам сотрудничества для мастеров ногтевого сервиса</p>
+            </div>
+            <div class="brand-badge">HR & Operations</div>
+          </header>
+
+          <div class="intro-text">
+            Добро пожаловать в Glowly! Мы предлагаем три формата работы для лицензированных мастеров ногтевого сервиса.
+            В данном руководстве приведен сравнительный анализ операционной структуры, налоговых обязательств, льгот и
+            требований к страхованию для каждого варианта.
+          </div>
+
+          <h2 class="section-title">Сравнительная таблица форматов</h2>
+
+          <table class="comp-table">
+            <thead>
+              <tr>
+                <th>Категория / Параметр</th>
+                <th>1. W-2 Employee</th>
+                <th>2. Individual 1099</th>
+                <th>3. Business 1099</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Правовой статус</strong></td>
+                <td><span class="tag-w2">W-2 Direct</span><br />Официальный сотрудник компании</td>
+                <td><span class="tag-ind">1099 Sole Prop</span><br />Независимый специалист (Физлицо)</td>
+                <td><span class="tag-biz">1099 Business</span><br />Зарегистрированная компания (LLC / Inc)</td>
+              </tr>
+              <tr>
+                <td><strong>Удержание налогов</strong></td>
+                <td>Автоматически удерживаются с пейчека (Federal, NYS, City, FICA).</td>
+                <td>Самостоятельная уплата через 1099-NEC. Оплата Self-Employment Tax.</td>
+                <td>Самостоятельная уплата через 1099-NEC на счет вашей компании.</td>
+              </tr>
+              <tr>
+                <td><strong>Льготы от салона</strong></td>
+                <td>Оплачиваемый больничный (Paid Sick Leave), NYS Disability и PFL.</td>
+                <td>Не предоставляются. Полностью независимая деятельность.</td>
+                <td>Не предоставляются. Формат Business-to-Business (B2B).</td>
+              </tr>
+              <tr>
+                <td><strong>Страховое покрытие</strong></td>
+                <td>Полное покрытие по полисам General & Professional Liability салона.</td>
+                <td>Личный полис (минимум $25k/$75k) с указанием салона как Additionally Insured.</td>
+                <td>Бизнес-страховка вашей компании с указанием Glowly как Additionally Insured.</td>
+              </tr>
+              <tr>
+                <td><strong>Требуемые лицензии</strong></td>
+                <td>Личная лицензия NYS (Nail Specialty или Cosmetology).</td>
+                <td>Личная лицензия + NYS Renter Area License.</td>
+                <td>Личная лицензия + Бизнес-лицензия / Area License на имя компании.</td>
+              </tr>
+              <tr>
+                <td><strong>Договор с салоном</strong></td>
+                <td>Трудовой договор (Employment Agreement) и форма W-4.</td>
+                <td>Booth Rental Agreement и налоговая форма W-9.</td>
+                <td>Business Booth Rental Agreement и W-9 (на EIN компании).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="page-footer">
+          <span>Glowly™ — Руководство по вариантам сотрудничества</span>
+          <span>Страница 1 из 2</span>
+        </footer>
+      </section>
+
+      <!-- PAGE 2 -->
+      <section class="page">
+        <div class="page-content">
+          <h2 class="section-title">Подробный обзор каждого варианта</h2>
+
+          <div class="cards-grid">
+            <!-- CARD 1 -->
+            <div class="option-card card-w2">
+              <div class="card-header">
+                <h3>Option 1: W-2 Employee</h3>
+                <div class="card-subtitle">Штатный сотрудник</div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Прямое трудоустройство в Glowly. Салон ведет расчет налогов, обеспечивает поток клиентов и
+                  предоставляемый государством пакет социальный защиты.
+                </p>
+                <ul class="feature-list">
+                  <li><strong>Налоги:</strong> Удерживаются автоматически из заработной платы.</li>
+                  <li><strong>Страховка:</strong> Полностью покрывается полисом ответственности салона.</li>
+                  <li><strong>Больничный:</strong> Начисление Paid Sick Leave согласно законам штата и города.</li>
+                  <li><strong>Гос. льготы:</strong> Покрытие по NYS Disability и Paid Family Leave (PFL).</li>
+                  <li>
+                    <strong>Поддержка:</strong> Клиентский поток, маркетинговое продвижение, материалы и график
+                    предоставляются салоном.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="option-card card-ind">
+              <div class="card-header">
+                <h3>Option 2: Individual 1099</h3>
+                <div class="card-subtitle">Независимый подрядчик</div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Работа в качестве независимого мастера, арендующего рабочее место (booth rental) в салоне, с полным
+                  контролем над своим графиком и операциями.
+                </p>
+                <ul class="feature-list">
+                  <li>
+                    <strong>Налоги:</strong> Отчет по форме 1099-NEC. Налоги не удерживаются salon-ом; мастер
+                    самостоятельно платит Self-Employment Tax.
+                  </li>
+                  <li>
+                    <strong>Страховка:</strong> Обязателен личный полис liability (мин. $25k/$75k) с внесением Glowly
+                    как Additionally Insured.
+                  </li>
+                  <li><strong>Лицензии:</strong> Действующая Personal License И NYS Renter Area License.</li>
+                  <li><strong>Документы:</strong> Заполнение формы W-9 и подписание Booth Rental Agreement.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="option-card card-biz">
+              <div class="card-header">
+                <h3>Option 3: Business 1099</h3>
+                <div class="card-subtitle">B2B Подрядчик (LLC / Corp)</div>
+              </div>
+              <div class="card-body">
+                <p>
+                  Формат для мастеров с собственной зарегистрированной компанией (например, LLC), заключающих договор
+                  Business-to-Business (B2B) с Glowly.
+                </p>
+                <ul class="feature-list">
+                  <li><strong>B2B Выплаты:</strong> Договор и финансовые расчеты оформляются на юридическое лицо.</li>
+                  <li>
+                    <strong>Налоги:</strong> Выдача формы 1099-NEC на EIN компании. Полностью самостоятельный
+                    корпоративный налоговый учет.
+                  </li>
+                  <li>
+                    <strong>Бизнес-страховка:</strong> Полис liability вашей компании с внесением Glowly в качестве
+                    Additionally Insured.
+                  </li>
+                  <li>
+                    <strong>Документы:</strong> Корпоративная W-9, регистрационные документы компании и B2B Booth Rental
+                    Agreement.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-box">
+            <h4>Инструкция по переходу на формат 1099</h4>
+            <p>
+              Если вы планируете перейти со статуса W-2 на статус Independent Contractor (Option 2 или Option 3),
+              пожалуйста, ознакомьтесь с нашим отдельным документом
+              <strong>«Шаги для перехода на 1099 (Renter Area License)»</strong>. В нем указаны точные лимиты
+              страхования, правильные формулировки для Certificate Holder и прямые ссылки на портал NYS Business
+              Express.
+            </p>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span>Glowly™ — Руководство по вариантам сотрудничества</span>
+          <span>Страница 2 из 2</span>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
