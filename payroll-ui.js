@@ -27,8 +27,8 @@
       <p id="payroll-context" class="muted"></p>
       <p id="credit-warning" class="note" hidden>Доход превышает порог упрощённого W-4 Step 3. Автоматический кредит на иждивенцев не применён. Для индивидуального расчёта с учётом кредитов потребуется сумма Step 3 из вашей W-4.</p>
       <p id="net-warning" class="note" hidden>Удержания превышают начисленную зарплату. Отрицательное значение показывает недостающую сумму; проверьте дополнительные удержания.</p>
-      <div class="payroll-breakdown">
-      <h3>Примерная детализация пейчека</h3>
+      <details class="payroll-breakdown">
+      <summary>Примерная детализация пейчека</summary>
       <div class="table-scroll"><table>
         <caption>Все суммы — за один двухнедельный период, USD. Налоги работодателя оплачиваются сверх зарплаты.</caption>
         <thead><tr><th scope="col">Налог / удержание</th><th scope="col">Сотрудник</th><th scope="col">Работодатель</th></tr></thead>
@@ -36,7 +36,7 @@
         <tfoot><tr><th scope="row">Итого налоги</th><td id="total-taxes"></td><td id="total-employer"></td></tr>
         <tr><th scope="row">Все удержания из пейчека<small>Включая PFL и SDI</small></th><td id="total-deductions"></td><td>—</td></tr></tfoot>
       </table></div>
-      </div>
+      </details>
     </div>
     <details class="sources">
       <summary>Как считается оценка · ставки и источники 2026</summary>
