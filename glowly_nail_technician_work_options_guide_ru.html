@@ -2,6 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="payroll.css" />
+    <script src="payroll.js" defer></script>
+    <script src="payroll-ui.js" defer></script>
     <title>Glowly — Варианты работы для мастеров ногтевого сервиса</title>
     <style>
       @page {
@@ -343,6 +347,7 @@
     </style>
   </head>
   <body>
+    <nav class="payroll-nav" aria-label="Навигация"><a href="#paycheck-calculator">Калькулятор зарплаты W-2 · 2026 ↓</a></nav>
     <div contenteditable="true">
       <!-- PAGE 1 -->
       <section class="page">
@@ -521,5 +526,8 @@
         </footer>
       </section>
     </div>
+    <section id="paycheck-calculator" class="payroll" aria-label="Калькулятор зарплаты W-2" contenteditable="false">
+      <noscript>Для расчёта зарплаты включите JavaScript в браузере.</noscript>
+    </section>
   </body>
 </html>
